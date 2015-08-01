@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "buithuyen" => "buithuyen48dt@gmail.com" }
+  s.author             = { "ThuyenBV" => "buithuyen48dt@gmail.com" }
   # Or just: s.author    = "buithuyen"
   # s.authors            = { "buithuyen" => "email@address.com" }
   # s.social_media_url   = "http://twitter.com/buithuyen"
@@ -77,7 +77,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/buithuyen/DragDismissModalViewController.git", :commit => "77f9c74732c69e3c8f15c061ff16bbd301f52dc1" }
+  s.source       = { :git => "https://github.com/buithuyen/DragDismissModalViewController.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -88,7 +88,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = 'TransitionViewController/SourceFile/**'
+  s.source_files  = 'TransitionViewController/SourceFile/*.{h,m}'
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
