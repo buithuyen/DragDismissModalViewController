@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "DragDismissModalViewController"
-  s.version      = "0.0.9"
+  s.version      = "0.0.1"
   s.summary      = "Drag to dismiss modal viewController"
   s.description      = <<-DESC
                         Custom TransitionViewController
