@@ -20,24 +20,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)btnPresentPressed:(id)sender {
     ChirldrenViewController *chirldrenViewController = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([ChirldrenViewController class])];
+    
+    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:chirldrenViewController];
+    
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
-        chirldrenViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-        chirldrenViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        navigation.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        navigation.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     }
     else {
         [self setModalPresentationStyle:UIModalPresentationCurrentContext];
     }
-    [self presentViewController:chirldrenViewController animated:YES completion:nil];
+    [self presentViewController:navigation animated:YES completion:nil];
 }
 
 @end

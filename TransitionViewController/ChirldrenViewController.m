@@ -7,9 +7,9 @@
 //
 
 #import "ChirldrenViewController.h"
-#import "UIViewController+DagToDismiss.h"
+#import "UINavigationController+DragToDismiss.h"
 
-@interface ChirldrenViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate>
+@interface ChirldrenViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -18,16 +18,16 @@
 @implementation ChirldrenViewController
 
 - (void)viewDidLoad {
-    [self setUpTransition];
-    self.panGesture = [[DetectScrollPanGesture alloc] initWithTarget:self
+    [self.navigationController setUpTransition];
+    self.navigationController.panGesture = [[DetectScrollPanGesture alloc] initWithTarget:self.navigationController
                                                               action:@selector(didPanWithGestureRecognizer:)];
-    self.panGesture.delegate = self;
-    self.panGesture.scrollview = self.collectionView;
-    [self.view addGestureRecognizer:self.panGesture];
+    self.navigationController.panGesture.delegate = self.navigationController;
+    self.navigationController.panGesture.scrollview = self.collectionView;
+    [self.navigationController.view addGestureRecognizer:self.navigationController.panGesture];
 }
 
 - (IBAction)btnDismiss:(id)sender {
-    [self dismissInteraction:NO animation:YES];
+    [self.navigationController dismissInteraction:NO animation:YES];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -42,14 +42,6 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
     return cell;
-}
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    return YES;
-}
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    return YES;
 }
 
 @end

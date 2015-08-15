@@ -1,40 +1,40 @@
 //
-//  UIViewController+DagToDismiss.m
+//  UINavigationController+DragToDismiss.m
 //  TransitionViewController
 //
-//  Created by ThuyenBV on 7/31/15.
+//  Created by ThuyenBV on 8/5/15.
 //  Copyright (c) 2015 ThuyenBV. All rights reserved.
 //
 
-#import "UIViewController+DagToDismiss.h"
+#import "UINavigationController+DragToDismiss.h"
 
 #import "TransitionObject.h"
 #import <objc/runtime.h>
 
-NSString const *keyObjectTransition = @"keyObjectTransition";
-NSString const *keyPanGesture       = @"keyPanGesture";
+NSString const *keyNavigationObjectTransition = @"keyObjectTransition";
+NSString const *keyNavigationPanGesture       = @"keyPanGesture";
 
-@implementation UIViewController (DagToDismiss)
+@implementation UINavigationController (DragToDismiss)
 @dynamic objTransition,panGesture;
 
 #pragma mark - ObjTransiton
 
 - (void)setObjTransition:(TransitionObject *)objTransition {
-    objc_setAssociatedObject(self, &keyObjectTransition, objTransition, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &keyNavigationObjectTransition, objTransition, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (TransitionObject *)objTransition {
-    return objc_getAssociatedObject(self, &keyObjectTransition);
+    return objc_getAssociatedObject(self, &keyNavigationObjectTransition);
 }
 
 #pragma mark - PanGesture
 
 - (void)setPanGesture:(DetectScrollPanGesture *)panGesture {
-    objc_setAssociatedObject(self, &keyPanGesture, panGesture, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &keyNavigationPanGesture, panGesture, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (DetectScrollPanGesture *)panGesture {
-    return objc_getAssociatedObject(self, &keyPanGesture);
+    return objc_getAssociatedObject(self, &keyNavigationPanGesture);
 }
 
 #pragma mark - Public Method
@@ -80,6 +80,5 @@ NSString const *keyPanGesture       = @"keyPanGesture";
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return YES;
 }
-
 
 @end
