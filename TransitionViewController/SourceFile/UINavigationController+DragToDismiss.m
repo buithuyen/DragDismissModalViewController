@@ -8,51 +8,49 @@
 
 #import "UINavigationController+DragToDismiss.h"
 
-#import "TransitionObject.h"
+#import "IAWTransitionObject.h"
 #import <objc/runtime.h>
 
-NSString const *keyNavigationObjectTransition = @"keyObjectTransition";
-NSString const *keyNavigationPanGesture       = @"keyPanGesture";
+NSString const* keyNavigationObjectTransition = @"keyObjectTransition";
+NSString const* keyNavigationPanGesture       = @"keyPanGesture";
 
 @implementation UINavigationController (DragToDismiss)
-@dynamic objTransition,panGesture;
+@dynamic objTransition, panGesture;
 
 #pragma mark - ObjTransiton
 
-- (void)setObjTransition:(TransitionObject *)objTransition {
+- (void)setObjTransition:(IAWTransitionObject*)objTransition {
     objc_setAssociatedObject(self, &keyNavigationObjectTransition, objTransition, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (TransitionObject *)objTransition {
+- (IAWTransitionObject*)objTransition {
     return objc_getAssociatedObject(self, &keyNavigationObjectTransition);
 }
 
 #pragma mark - PanGesture
 
-- (void)setPanGesture:(DetectScrollPanGesture *)panGesture {
+- (void)setPanGesture:(IAWDetectedScrollPanGesture*)panGesture {
     objc_setAssociatedObject(self, &keyNavigationPanGesture, panGesture, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (DetectScrollPanGesture *)panGesture {
+- (IAWDetectedScrollPanGesture*)panGesture {
     return objc_getAssociatedObject(self, &keyNavigationPanGesture);
 }
 
 #pragma mark - Public Method
 
 - (void)setUpTransition {
-    self.objTransition = [[TransitionObject alloc] init];
-    
-    self.modalPresentationStyle = UIModalPresentationCustom;
-    
-    self.transitioningDelegate = self.objTransition;
+    self.objTransition = [[IAWTransitionObject alloc] init];
+
+    self.modalPresentationStyle                       = UIModalPresentationCustom;
+    self.transitioningDelegate                        = self.objTransition;
     self.modalPresentationCapturesStatusBarAppearance = YES;
 }
 
-- (void)didPanWithGestureRecognizer:(UIPanGestureRecognizer *)panGestureRecognizer {
+- (void)didPanWithGestureRecognizer:(UIPanGestureRecognizer*)panGestureRecognizer {
     if (panGestureRecognizer.state == UIGestureRecognizerStateBegan) {
         [self dismissInteraction:YES animation:YES];
-    }
-    else {
+    } else {
         [self.objTransition didPanWithPanGestureRecognizer:panGestureRecognizer
                                                  viewToPan:self.view
                                                anchorPoint:self.boundsCenterPoint];
@@ -61,7 +59,11 @@ NSString const *keyNavigationPanGesture       = @"keyPanGesture";
 
 - (void)dismissInteraction:(BOOL)isInteraction animation:(BOOL)animated {
     self.objTransition.isInteraction = isInteraction;
-    [self dismissViewControllerAnimated:animated completion: ^{
+
+    __weak __typeof(self) weakSelf = self;
+    [self dismissViewControllerAnimated:animated completion:^{
+        BOOL isStillOnscreen = weakSelf.view.window != nil;
+        weakSelf.objTransition.isDismissing = !isStillOnscreen;
     }];
 }
 
@@ -73,11 +75,11 @@ NSString const *keyNavigationPanGesture       = @"keyPanGesture";
 
 #pragma mark - UIGestureRecognizerDelegate
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+- (BOOL)gestureRecognizer:(UIGestureRecognizer*)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer*)otherGestureRecognizer {
     return YES;
 }
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+- (BOOL)gestureRecognizer:(UIGestureRecognizer*)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer*)otherGestureRecognizer {
     return YES;
 }
 

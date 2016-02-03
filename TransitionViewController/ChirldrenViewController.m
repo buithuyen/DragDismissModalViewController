@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [self.navigationController setUpTransition];
-    self.navigationController.panGesture = [[DetectScrollPanGesture alloc] initWithTarget:self.navigationController
+    self.navigationController.panGesture = [[IAWDetectedScrollPanGesture alloc] initWithTarget:self.navigationController
                                                               action:@selector(didPanWithGestureRecognizer:)];
     self.navigationController.panGesture.delegate = self.navigationController;
     self.navigationController.panGesture.scrollview = self.collectionView;

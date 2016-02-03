@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D09A3161B6B923200E9EAF7 /* TransitionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D09A3131B6B923200E9EAF7 /* TransitionObject.m */; };
-		1D09A3171B6B923200E9EAF7 /* UIViewController+DagToDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D09A3151B6B923200E9EAF7 /* UIViewController+DagToDismiss.m */; };
 		1D2AD3871B7F302C0000E539 /* UINavigationController+DragToDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2AD3861B7F302C0000E539 /* UINavigationController+DragToDismiss.m */; };
-		1D2AD38A1B7F30540000E539 /* DetectScrollPanGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2AD3891B7F30540000E539 /* DetectScrollPanGesture.m */; };
 		1D74C1571B652DA000C20DBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74C1561B652DA000C20DBA /* main.m */; };
 		1D74C15A1B652DA000C20DBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74C1591B652DA000C20DBA /* AppDelegate.m */; };
 		1D74C15D1B652DA000C20DBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74C15C1B652DA000C20DBA /* ViewController.m */; };
@@ -18,17 +15,13 @@
 		1D74C1621B652DA000C20DBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D74C1611B652DA000C20DBA /* Images.xcassets */; };
 		1D74C1651B652DA000C20DBA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D74C1631B652DA000C20DBA /* LaunchScreen.xib */; };
 		1D74C17C1B652DFF00C20DBA /* ChirldrenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74C17B1B652DFF00C20DBA /* ChirldrenViewController.m */; };
+		1D7606861C61A3940023993E /* IAWDetectedScrollPanGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7606831C61A3940023993E /* IAWDetectedScrollPanGesture.m */; };
+		1D7606871C61A3940023993E /* IAWTransitionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7606851C61A3940023993E /* IAWTransitionObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D09A3121B6B923200E9EAF7 /* TransitionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionObject.h; sourceTree = "<group>"; };
-		1D09A3131B6B923200E9EAF7 /* TransitionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionObject.m; sourceTree = "<group>"; };
-		1D09A3141B6B923200E9EAF7 /* UIViewController+DagToDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DagToDismiss.h"; sourceTree = "<group>"; };
-		1D09A3151B6B923200E9EAF7 /* UIViewController+DagToDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DagToDismiss.m"; sourceTree = "<group>"; };
 		1D2AD3851B7F302C0000E539 /* UINavigationController+DragToDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+DragToDismiss.h"; sourceTree = "<group>"; };
 		1D2AD3861B7F302C0000E539 /* UINavigationController+DragToDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+DragToDismiss.m"; sourceTree = "<group>"; };
-		1D2AD3881B7F30540000E539 /* DetectScrollPanGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectScrollPanGesture.h; sourceTree = "<group>"; };
-		1D2AD3891B7F30540000E539 /* DetectScrollPanGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetectScrollPanGesture.m; sourceTree = "<group>"; };
 		1D74C1511B652DA000C20DBA /* TransitionViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D74C1551B652DA000C20DBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D74C1561B652DA000C20DBA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -41,6 +34,10 @@
 		1D74C1641B652DA000C20DBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1D74C17A1B652DFF00C20DBA /* ChirldrenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChirldrenViewController.h; sourceTree = "<group>"; };
 		1D74C17B1B652DFF00C20DBA /* ChirldrenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChirldrenViewController.m; sourceTree = "<group>"; };
+		1D7606821C61A3940023993E /* IAWDetectedScrollPanGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAWDetectedScrollPanGesture.h; sourceTree = "<group>"; };
+		1D7606831C61A3940023993E /* IAWDetectedScrollPanGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAWDetectedScrollPanGesture.m; sourceTree = "<group>"; };
+		1D7606841C61A3940023993E /* IAWTransitionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAWTransitionObject.h; sourceTree = "<group>"; };
+		1D7606851C61A3940023993E /* IAWTransitionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAWTransitionObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +54,10 @@
 		1D09A3111B6B923200E9EAF7 /* SourceFile */ = {
 			isa = PBXGroup;
 			children = (
-				1D09A3121B6B923200E9EAF7 /* TransitionObject.h */,
-				1D09A3131B6B923200E9EAF7 /* TransitionObject.m */,
-				1D2AD3881B7F30540000E539 /* DetectScrollPanGesture.h */,
-				1D2AD3891B7F30540000E539 /* DetectScrollPanGesture.m */,
-				1D09A3141B6B923200E9EAF7 /* UIViewController+DagToDismiss.h */,
-				1D09A3151B6B923200E9EAF7 /* UIViewController+DagToDismiss.m */,
+				1D7606821C61A3940023993E /* IAWDetectedScrollPanGesture.h */,
+				1D7606831C61A3940023993E /* IAWDetectedScrollPanGesture.m */,
+				1D7606841C61A3940023993E /* IAWTransitionObject.h */,
+				1D7606851C61A3940023993E /* IAWTransitionObject.m */,
 				1D2AD3851B7F302C0000E539 /* UINavigationController+DragToDismiss.h */,
 				1D2AD3861B7F302C0000E539 /* UINavigationController+DragToDismiss.m */,
 			);
@@ -183,13 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D74C15D1B652DA000C20DBA /* ViewController.m in Sources */,
-				1D2AD38A1B7F30540000E539 /* DetectScrollPanGesture.m in Sources */,
 				1D2AD3871B7F302C0000E539 /* UINavigationController+DragToDismiss.m in Sources */,
-				1D09A3161B6B923200E9EAF7 /* TransitionObject.m in Sources */,
 				1D74C15A1B652DA000C20DBA /* AppDelegate.m in Sources */,
 				1D74C17C1B652DFF00C20DBA /* ChirldrenViewController.m in Sources */,
+				1D7606861C61A3940023993E /* IAWDetectedScrollPanGesture.m in Sources */,
 				1D74C1571B652DA000C20DBA /* main.m in Sources */,
-				1D09A3171B6B923200E9EAF7 /* UIViewController+DagToDismiss.m in Sources */,
+				1D7606871C61A3940023993E /* IAWTransitionObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
