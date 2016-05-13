@@ -139,6 +139,8 @@ static const CGFloat InteractionControllerReturnToCenterVelocityAnimationRatio =
 - (void)animateTransition:(id <UIViewControllerContextTransitioning> )transitionContext {
     UIView* fromView = [self fromViewForTransitionContext:transitionContext];
     UIView* toView   = [self toViewForTransitionContext:transitionContext];
+    
+    UIViewController* toViewController   = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
 
     toView.frame = [self finalFrameForToViewControllerWithTransitionContext:transitionContext];
 
@@ -162,6 +164,7 @@ static const CGFloat InteractionControllerReturnToCenterVelocityAnimationRatio =
 
     viewToFade.alpha = beginningAlpha;
 
+    [toViewController beginAppearanceTransition:YES animated:YES];
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         viewToFade.alpha = endingAlpha;
     } completion:^(BOOL finished) {
@@ -172,7 +175,8 @@ static const CGFloat InteractionControllerReturnToCenterVelocityAnimationRatio =
                 [transitionContext finishInteractiveTransition];
             }
         }
-
+        
+        [toViewController endAppearanceTransition];
         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
     }];
 }
