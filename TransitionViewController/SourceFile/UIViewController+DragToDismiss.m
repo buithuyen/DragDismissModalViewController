@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 ThuyenBV. All rights reserved.
 //
 
-#import "UINavigationController+DragToDismiss.h"
+#import "UIViewController+DragToDismiss.h"
 
 #import "IAWTransitionObject.h"
 #import <objc/runtime.h>
@@ -14,8 +14,8 @@
 NSString const* keyNavigationObjectTransition = @"keyObjectTransition";
 NSString const* keyNavigationPanGesture       = @"keyPanGesture";
 
-@implementation UINavigationController (DragToDismiss)
-@dynamic objTransition, panGesture;
+@implementation UIViewController (DragToDismiss)
+//@dynamic objTransition, panGesture;
 
 #pragma mark - ObjTransiton
 
@@ -39,12 +39,18 @@ NSString const* keyNavigationPanGesture       = @"keyPanGesture";
 
 #pragma mark - Public Method
 
-- (void)setUpTransition {
+- (void)setUpTransition:(UIScrollView*)scrollView {
     self.objTransition = [[IAWTransitionObject alloc] init];
 
     self.modalPresentationStyle                       = UIModalPresentationCustom;
     self.transitioningDelegate                        = self.objTransition;
     self.modalPresentationCapturesStatusBarAppearance = YES;
+    
+    self.panGesture = [[IAWDetectedScrollPanGesture alloc] initWithTarget:self
+                                                                   action:@selector(didPanWithGestureRecognizer:)];
+    self.panGesture.delegate = self;
+    self.panGesture.scrollview = scrollView;
+    [self.view addGestureRecognizer:self.panGesture];
 }
 
 - (void)didPanWithGestureRecognizer:(UIPanGestureRecognizer*)panGestureRecognizer {

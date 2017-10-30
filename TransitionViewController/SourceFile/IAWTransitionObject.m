@@ -11,7 +11,7 @@
 static const CGFloat InteractionControllerPanDismissDistanceRatio              = 50.0 / 667.0;
 static const CGFloat InteractionControllerPanDismissMaximumDuration            = 0.45;
 static const CGFloat InteractionControllerReturnToCenterVelocityAnimationRatio = 0.00007;
-
+//static const CGRect ScreenBounds = UIScreen.mainScreen.bounds;
 
 @interface IAWTransitionObject ()
 
@@ -155,13 +155,16 @@ static const CGFloat InteractionControllerReturnToCenterVelocityAnimationRatio =
     UIView* viewToFade     = toView;
     CGFloat beginningAlpha = 0.0;
     CGFloat endingAlpha    = 1.0;
+    
+//    CGRect startFrame = CGRectMake(0, ScreenBounds.size.height, ScreenBounds.size.width, ScreenBounds.size.height);
+
 
     if (self.isDismissing) {
         viewToFade     = fromView;
         beginningAlpha = 1.0;
         endingAlpha    = 0.0;
     }
-
+    
     viewToFade.alpha = beginningAlpha;
 
     [toViewController beginAppearanceTransition:YES animated:YES];

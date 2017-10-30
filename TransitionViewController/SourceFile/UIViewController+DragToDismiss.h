@@ -10,12 +10,12 @@
 #import "IAWTransitionObject.h"
 #import "IAWDetectedScrollPanGesture.h"
 
-@interface UINavigationController (DragToDismiss) <UIGestureRecognizerDelegate>
+@interface UIViewController (DragToDismiss) <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) IAWTransitionObject* objTransition;
 @property (strong, nonatomic) IAWDetectedScrollPanGesture* panGesture;
 
-- (void)setUpTransition;
+- (void)setUpTransition:(UIScrollView*)scrollView;
 - (void)dismissInteraction:(BOOL)isInteraction animation:(BOOL)animated;
 - (void)didPanWithGestureRecognizer:(UIPanGestureRecognizer*)panGestureRecognizer;
 

@@ -7,7 +7,7 @@
 //
 
 #import "ChirldrenViewController.h"
-#import "UINavigationController+DragToDismiss.h"
+#import "UIViewController+DragToDismiss.h"
 
 @interface ChirldrenViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -18,16 +18,13 @@
 @implementation ChirldrenViewController
 
 - (void)viewDidLoad {
-    [self.navigationController setUpTransition];
-    self.navigationController.panGesture = [[IAWDetectedScrollPanGesture alloc] initWithTarget:self.navigationController
-                                                              action:@selector(didPanWithGestureRecognizer:)];
-    self.navigationController.panGesture.delegate = self.navigationController;
-    self.navigationController.panGesture.scrollview = self.collectionView;
-    [self.navigationController.view addGestureRecognizer:self.navigationController.panGesture];
+    [super viewDidLoad];
+    
+    [self setUpTransition:self.collectionView];
 }
 
 - (IBAction)btnDismiss:(id)sender {
-    [self.navigationController dismissInteraction:NO animation:YES];
+    [self dismissInteraction:NO animation:YES];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D2AD3871B7F302C0000E539 /* UINavigationController+DragToDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2AD3861B7F302C0000E539 /* UINavigationController+DragToDismiss.m */; };
+		1D2AD3871B7F302C0000E539 /* UIViewController+DragToDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2AD3861B7F302C0000E539 /* UIViewController+DragToDismiss.m */; };
 		1D74C1571B652DA000C20DBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74C1561B652DA000C20DBA /* main.m */; };
 		1D74C15A1B652DA000C20DBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74C1591B652DA000C20DBA /* AppDelegate.m */; };
 		1D74C15D1B652DA000C20DBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74C15C1B652DA000C20DBA /* ViewController.m */; };
@@ -20,8 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D2AD3851B7F302C0000E539 /* UINavigationController+DragToDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+DragToDismiss.h"; sourceTree = "<group>"; };
-		1D2AD3861B7F302C0000E539 /* UINavigationController+DragToDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+DragToDismiss.m"; sourceTree = "<group>"; };
+		1D2AD3851B7F302C0000E539 /* UIViewController+DragToDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DragToDismiss.h"; sourceTree = "<group>"; };
+		1D2AD3861B7F302C0000E539 /* UIViewController+DragToDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DragToDismiss.m"; sourceTree = "<group>"; };
 		1D74C1511B652DA000C20DBA /* TransitionViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D74C1551B652DA000C20DBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D74C1561B652DA000C20DBA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,8 +58,8 @@
 				1D7606831C61A3940023993E /* IAWDetectedScrollPanGesture.m */,
 				1D7606841C61A3940023993E /* IAWTransitionObject.h */,
 				1D7606851C61A3940023993E /* IAWTransitionObject.m */,
-				1D2AD3851B7F302C0000E539 /* UINavigationController+DragToDismiss.h */,
-				1D2AD3861B7F302C0000E539 /* UINavigationController+DragToDismiss.m */,
+				1D2AD3851B7F302C0000E539 /* UIViewController+DragToDismiss.h */,
+				1D2AD3861B7F302C0000E539 /* UIViewController+DragToDismiss.m */,
 			);
 			path = SourceFile;
 			sourceTree = "<group>";
@@ -138,6 +138,7 @@
 				TargetAttributes = {
 					1D74C1501B652DA000C20DBA = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = HRJ3G63Q48;
 					};
 				};
 			};
@@ -178,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D74C15D1B652DA000C20DBA /* ViewController.m in Sources */,
-				1D2AD3871B7F302C0000E539 /* UINavigationController+DragToDismiss.m in Sources */,
+				1D2AD3871B7F302C0000E539 /* UIViewController+DragToDismiss.m in Sources */,
 				1D74C15A1B652DA000C20DBA /* AppDelegate.m in Sources */,
 				1D74C17C1B652DFF00C20DBA /* ChirldrenViewController.m in Sources */,
 				1D7606861C61A3940023993E /* IAWDetectedScrollPanGesture.m in Sources */,
@@ -293,9 +294,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HRJ3G63Q48;
 				INFOPLIST_FILE = TransitionViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buvaty.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -304,9 +307,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HRJ3G63Q48;
 				INFOPLIST_FILE = TransitionViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buvaty.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
