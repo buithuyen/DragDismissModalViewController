@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ChirldrenViewController.h"
+#import "UINavigationController+DragToDismiss.h"
 
 @interface ViewController ()
 
@@ -38,6 +39,7 @@
     else {
         [self setModalPresentationStyle:UIModalPresentationCurrentContext];
     }
+    
     [self presentViewController:navigation animated:YES completion:nil];
 }
 

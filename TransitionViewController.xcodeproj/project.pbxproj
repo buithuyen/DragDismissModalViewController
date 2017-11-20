@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D2AD3871B7F302C0000E539 /* UIViewController+DragToDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2AD3861B7F302C0000E539 /* UIViewController+DragToDismiss.m */; };
 		1D74C1571B652DA000C20DBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74C1561B652DA000C20DBA /* main.m */; };
 		1D74C15A1B652DA000C20DBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74C1591B652DA000C20DBA /* AppDelegate.m */; };
 		1D74C15D1B652DA000C20DBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74C15C1B652DA000C20DBA /* ViewController.m */; };
@@ -15,13 +14,17 @@
 		1D74C1621B652DA000C20DBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D74C1611B652DA000C20DBA /* Images.xcassets */; };
 		1D74C1651B652DA000C20DBA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D74C1631B652DA000C20DBA /* LaunchScreen.xib */; };
 		1D74C17C1B652DFF00C20DBA /* ChirldrenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74C17B1B652DFF00C20DBA /* ChirldrenViewController.m */; };
-		1D7606861C61A3940023993E /* IAWDetectedScrollPanGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7606831C61A3940023993E /* IAWDetectedScrollPanGesture.m */; };
-		1D7606871C61A3940023993E /* IAWTransitionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7606851C61A3940023993E /* IAWTransitionObject.m */; };
+		1D7AFDC21FB310E100363C09 /* IAWDetectedScrollPanGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7AFDBA1FB310E000363C09 /* IAWDetectedScrollPanGesture.m */; };
+		1D7AFDC31FB310E100363C09 /* IAWTransitionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7AFDBC1FB310E000363C09 /* IAWTransitionObject.m */; };
+		1D7AFDC41FB310E100363C09 /* UIViewControllerAnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7AFDBE1FB310E000363C09 /* UIViewControllerAnimatedTransition.m */; };
+		1D7AFDC51FB310E100363C09 /* UIViewController+DragToDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7AFDC11FB310E000363C09 /* UIViewController+DragToDismiss.m */; };
+		1D7AFDCA1FB3119E00363C09 /* UINavigationController+DragToDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7AFDC91FB3119E00363C09 /* UINavigationController+DragToDismiss.m */; };
+		1D7AFDD01FB358D200363C09 /* IAWPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7AFDCF1FB358D200363C09 /* IAWPresentationController.m */; };
+		552F844E5D5E6709BD9F6315 /* libPods-TransitionViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4E4EAC472DE2112E151243 /* libPods-TransitionViewController.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D2AD3851B7F302C0000E539 /* UIViewController+DragToDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DragToDismiss.h"; sourceTree = "<group>"; };
-		1D2AD3861B7F302C0000E539 /* UIViewController+DragToDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DragToDismiss.m"; sourceTree = "<group>"; };
+		02FE579680581F0376C0FA5A /* Pods-TransitionViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransitionViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TransitionViewController/Pods-TransitionViewController.debug.xcconfig"; sourceTree = "<group>"; };
 		1D74C1511B652DA000C20DBA /* TransitionViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D74C1551B652DA000C20DBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D74C1561B652DA000C20DBA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -34,10 +37,20 @@
 		1D74C1641B652DA000C20DBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1D74C17A1B652DFF00C20DBA /* ChirldrenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChirldrenViewController.h; sourceTree = "<group>"; };
 		1D74C17B1B652DFF00C20DBA /* ChirldrenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChirldrenViewController.m; sourceTree = "<group>"; };
-		1D7606821C61A3940023993E /* IAWDetectedScrollPanGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAWDetectedScrollPanGesture.h; sourceTree = "<group>"; };
-		1D7606831C61A3940023993E /* IAWDetectedScrollPanGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAWDetectedScrollPanGesture.m; sourceTree = "<group>"; };
-		1D7606841C61A3940023993E /* IAWTransitionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAWTransitionObject.h; sourceTree = "<group>"; };
-		1D7606851C61A3940023993E /* IAWTransitionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAWTransitionObject.m; sourceTree = "<group>"; };
+		1D7AFDB91FB310E000363C09 /* IAWDetectedScrollPanGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAWDetectedScrollPanGesture.h; sourceTree = "<group>"; };
+		1D7AFDBA1FB310E000363C09 /* IAWDetectedScrollPanGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAWDetectedScrollPanGesture.m; sourceTree = "<group>"; };
+		1D7AFDBB1FB310E000363C09 /* IAWTransitionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAWTransitionObject.h; sourceTree = "<group>"; };
+		1D7AFDBC1FB310E000363C09 /* IAWTransitionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAWTransitionObject.m; sourceTree = "<group>"; };
+		1D7AFDBD1FB310E000363C09 /* UIViewControllerAnimatedTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerAnimatedTransition.h; sourceTree = "<group>"; };
+		1D7AFDBE1FB310E000363C09 /* UIViewControllerAnimatedTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerAnimatedTransition.m; sourceTree = "<group>"; };
+		1D7AFDC01FB310E000363C09 /* UIViewController+DragToDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DragToDismiss.h"; sourceTree = "<group>"; };
+		1D7AFDC11FB310E000363C09 /* UIViewController+DragToDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DragToDismiss.m"; sourceTree = "<group>"; };
+		1D7AFDC71FB3113800363C09 /* UINavigationController+DragToDismiss.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+DragToDismiss.h"; sourceTree = "<group>"; };
+		1D7AFDC91FB3119E00363C09 /* UINavigationController+DragToDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+DragToDismiss.m"; sourceTree = "<group>"; };
+		1D7AFDCE1FB358D200363C09 /* IAWPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAWPresentationController.h; sourceTree = "<group>"; };
+		1D7AFDCF1FB358D200363C09 /* IAWPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IAWPresentationController.m; sourceTree = "<group>"; };
+		7A8465A8343EEB7492C0D7D5 /* Pods-TransitionViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransitionViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-TransitionViewController/Pods-TransitionViewController.release.xcconfig"; sourceTree = "<group>"; };
+		CC4E4EAC472DE2112E151243 /* libPods-TransitionViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TransitionViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552F844E5D5E6709BD9F6315 /* libPods-TransitionViewController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +68,8 @@
 		1D09A3111B6B923200E9EAF7 /* SourceFile */ = {
 			isa = PBXGroup;
 			children = (
-				1D7606821C61A3940023993E /* IAWDetectedScrollPanGesture.h */,
-				1D7606831C61A3940023993E /* IAWDetectedScrollPanGesture.m */,
-				1D7606841C61A3940023993E /* IAWTransitionObject.h */,
-				1D7606851C61A3940023993E /* IAWTransitionObject.m */,
-				1D2AD3851B7F302C0000E539 /* UIViewController+DragToDismiss.h */,
-				1D2AD3861B7F302C0000E539 /* UIViewController+DragToDismiss.m */,
+				1D7AFDBF1FB310E000363C09 /* Extension */,
+				1D7AFDB81FB310E000363C09 /* Transition */,
 			);
 			path = SourceFile;
 			sourceTree = "<group>";
@@ -69,6 +79,8 @@
 			children = (
 				1D74C1531B652DA000C20DBA /* TransitionViewController */,
 				1D74C1521B652DA000C20DBA /* Products */,
+				BE7DD12B468F12F7C7070DCF /* Pods */,
+				771464CE6203D911D45A3257 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +119,49 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1D7AFDB81FB310E000363C09 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				1D7AFDB91FB310E000363C09 /* IAWDetectedScrollPanGesture.h */,
+				1D7AFDBA1FB310E000363C09 /* IAWDetectedScrollPanGesture.m */,
+				1D7AFDBB1FB310E000363C09 /* IAWTransitionObject.h */,
+				1D7AFDBC1FB310E000363C09 /* IAWTransitionObject.m */,
+				1D7AFDBD1FB310E000363C09 /* UIViewControllerAnimatedTransition.h */,
+				1D7AFDBE1FB310E000363C09 /* UIViewControllerAnimatedTransition.m */,
+				1D7AFDCE1FB358D200363C09 /* IAWPresentationController.h */,
+				1D7AFDCF1FB358D200363C09 /* IAWPresentationController.m */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		1D7AFDBF1FB310E000363C09 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1D7AFDC01FB310E000363C09 /* UIViewController+DragToDismiss.h */,
+				1D7AFDC11FB310E000363C09 /* UIViewController+DragToDismiss.m */,
+				1D7AFDC71FB3113800363C09 /* UINavigationController+DragToDismiss.h */,
+				1D7AFDC91FB3119E00363C09 /* UINavigationController+DragToDismiss.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		771464CE6203D911D45A3257 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC4E4EAC472DE2112E151243 /* libPods-TransitionViewController.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE7DD12B468F12F7C7070DCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02FE579680581F0376C0FA5A /* Pods-TransitionViewController.debug.xcconfig */,
+				7A8465A8343EEB7492C0D7D5 /* Pods-TransitionViewController.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D74C1741B652DA000C20DBA /* Build configuration list for PBXNativeTarget "TransitionViewController" */;
 			buildPhases = (
+				64FF7E4E378C1A3CFA02C30E /* [CP] Check Pods Manifest.lock */,
 				1D74C14D1B652DA000C20DBA /* Sources */,
 				1D74C14E1B652DA000C20DBA /* Frameworks */,
 				1D74C14F1B652DA000C20DBA /* Resources */,
+				EF7588AFDD29D5FE1AE88113 /* [CP] Embed Pods Frameworks */,
+				F5F1FBCAB7CD2076A5A4DA67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,18 +231,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		64FF7E4E378C1A3CFA02C30E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TransitionViewController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF7588AFDD29D5FE1AE88113 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TransitionViewController/Pods-TransitionViewController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5F1FBCAB7CD2076A5A4DA67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TransitionViewController/Pods-TransitionViewController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1D74C14D1B652DA000C20DBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7AFDC51FB310E100363C09 /* UIViewController+DragToDismiss.m in Sources */,
+				1D7AFDCA1FB3119E00363C09 /* UINavigationController+DragToDismiss.m in Sources */,
+				1D7AFDC21FB310E100363C09 /* IAWDetectedScrollPanGesture.m in Sources */,
 				1D74C15D1B652DA000C20DBA /* ViewController.m in Sources */,
-				1D2AD3871B7F302C0000E539 /* UIViewController+DragToDismiss.m in Sources */,
 				1D74C15A1B652DA000C20DBA /* AppDelegate.m in Sources */,
+				1D7AFDD01FB358D200363C09 /* IAWPresentationController.m in Sources */,
+				1D7AFDC31FB310E100363C09 /* IAWTransitionObject.m in Sources */,
 				1D74C17C1B652DFF00C20DBA /* ChirldrenViewController.m in Sources */,
-				1D7606861C61A3940023993E /* IAWDetectedScrollPanGesture.m in Sources */,
 				1D74C1571B652DA000C20DBA /* main.m in Sources */,
-				1D7606871C61A3940023993E /* IAWTransitionObject.m in Sources */,
+				1D7AFDC41FB310E100363C09 /* UIViewControllerAnimatedTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +404,7 @@
 		};
 		1D74C1751B652DA000C20DBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02FE579680581F0376C0FA5A /* Pods-TransitionViewController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HRJ3G63Q48;
@@ -305,6 +418,7 @@
 		};
 		1D74C1761B652DA000C20DBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A8465A8343EEB7492C0D7D5 /* Pods-TransitionViewController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HRJ3G63Q48;

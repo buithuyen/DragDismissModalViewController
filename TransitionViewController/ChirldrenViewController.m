@@ -20,11 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setUpTransition:self.collectionView];
+    [self.navigationController setUpTransition:self.collectionView];
 }
 
 - (IBAction)btnDismiss:(id)sender {
-    [self dismissInteraction:NO animation:YES];
+//    [self dismissInteraction:NO animation:YES];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
